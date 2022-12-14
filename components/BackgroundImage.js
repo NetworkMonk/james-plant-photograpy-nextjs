@@ -21,7 +21,7 @@ export default function BackgroundImage(props) {
           transition={{ type: 'linear', duration: 1.5, delay: 1.5 }}
           className="absolute -z-10 top-0 left-0 right-0 bottom-0 overflow-hidden"
         >
-          <Image src={`/img/photos/${image}.jpg`} alt="Background Image" style={{ objectFit: 'cover' }} fill priority className={"brightness-50 saturate-[.2]"} />
+          <Image src={`/img/photos/${image}.jpg`} alt="Background Image" style={{ objectFit: 'cover' }} sizes="100vw" fill priority className={"brightness-50 saturate-[.2]"} />
         </motion.div>
       )}
     </AnimatePresence>

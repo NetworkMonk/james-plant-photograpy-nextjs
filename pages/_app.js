@@ -1,13 +1,29 @@
-import { AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import StandardPage from '../components/StandardPage';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  useEffect( () => { document?.querySelector("body")?.classList?.add("overflow-hidden") } );
+  const [pageVisible, setPageVisible] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => { document?.querySelector("body")?.classList?.add("overflow-hidden") });
+  useEffect(() => {
+    const delayTimer = setTimeout(() => {
+      setPageVisible(true);
+    }, 1500);
+    return () => clearTimeout(delayTimer);
+  }, []);
+
   return (
-    <AnimatePresence mode="wait">
-      <Component {...pageProps} />
-    </AnimatePresence>
+    <StandardPage>
+      <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)} mode="wait">
+        {pageVisible && (
+          <Component {...pageProps} key={router.route} />
+        )}
+      </AnimatePresence>
+    </StandardPage>
   );
 }
 
