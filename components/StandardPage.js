@@ -1,5 +1,5 @@
 import Head from "next/head";
-import BackgroundSlideShow from '../components/BackgroundSlideshow'
+import BackgroundSlideShow from "./BackgroundSlideShow";
 import Menu from '../components/Menu'
 
 export default function StandardPage(props) {
