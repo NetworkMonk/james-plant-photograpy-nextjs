@@ -66,7 +66,7 @@ export default function Menu(props) {
           variants={{
             show: {
               transition: {
-                staggerChildren: .5,
+                staggerChildren: .25,
                 delayChildren: 1.5
               }
             }
@@ -104,7 +104,7 @@ export default function Menu(props) {
               initial="hidden"
               animate="enter"
               exit="exit"
-              transition={{ type: 'linear', duration: 1, delay: 0 }}
+              transition={{ type: 'linear', duration: .5, delay: 0 }}
               className="absolute left-0 bottom-0 top-0 w-[90vw] shadow-2xl shadow-black bg-neutral-900 bg-opacity-50 backdrop-blur-lg overflow-hidden z-10"
             >
 
@@ -112,14 +112,14 @@ export default function Menu(props) {
                 variants={{
                   show: {
                     transition: {
-                      staggerChildren: .5,
+                      staggerChildren: .25,
                       delayChildren: 0
                     }
                   }
                 }}
                 initial="hidden"
                 animate="show"
-                transition={{ type: 'linear', duration: 1, delay: 0 }}
+                transition={{ type: 'linear', duration: 0, delay: 0 }}
                 className="text-white mt-36"
               >
                 {menuItems.map((menuItem, menuIndex) => {
@@ -127,7 +127,7 @@ export default function Menu(props) {
                     <Link href={menuItem.href} key={menuIndex} onClick={() => setMenuVisible(false)}>
                       <motion.li
                         variants={menuItemVariants}
-                        transition={{ type: 'linear', duration: 1 }}
+                        transition={{ type: 'linear', duration: .5 }}
                         className="text-md font-light p-4 px-6 uppercase tracking-widest hover:bg-white hover:bg-opacity-90 hover:text-black transition-all duration-500 cursor-pointer group"
                       >
                         <ChevronRightIcon className="inline w-4 h-4 -mt-1 mr-3" />

@@ -21,22 +21,20 @@ export default function Contact() {
         <ContentPanel>
           <ContentParagraph>You can contact me with any of the below links and I&apos;m happy to discuss any potential requirement you might have.</ContentParagraph>
           <ContentParagraph>
-            <a href="mailto:jamesplant@gmail.com" className="text-lg">
-              <Envelope className="w-5 inline-block mr-3 fill-current" />
-              jamesplant@gmail.com
-            </a>
-          </ContentParagraph>
-          <ContentParagraph>
-            <a href="https://instagram.com/jamesplantphotography" className="text-lg">
-              <Instagram className="w-5 inline-block mr-3 fill-current" />
-              @jamesplantphotography
-            </a>
-          </ContentParagraph>
-          <ContentParagraph>
-            <a href="https://wa.me/+447545960983" className="text-lg">
-              <WhatsApp className="w-5 inline-block mr-3 fill-current" />
-              07545960983
-            </a>
+            <span className="flex sm:inline-flex flex-col gap-3 justify-items-stretch">
+              <a href="mailto:jamesplant@gmail.com" className="text-lg border border-white block my-0 py-2 px-6 transition-all duration-300 hover:bg-white hover:text-black">
+                <Envelope className="w-5 inline-block mr-3 fill-current" />
+                jamesplant@gmail.com
+              </a>
+              <a href="https://instagram.com/jamesplantphotography" className="text-lg border border-white block my-0 py-2  px-6 transition-all duration-300 hover:bg-white hover:text-black">
+                <Instagram className="w-5 inline-block mr-3 fill-current" />
+                @jamesplantphotography
+              </a>
+              <a href="https://wa.me/+447545960983" className="text-lg border border-white block my-0 py-2 px-6 transition-all duration-300 hover:bg-white hover:text-black">
+                <WhatsApp className="w-5 inline-block mr-3 fill-current" />
+                07545960983
+              </a>
+            </span>
           </ContentParagraph>
         </ContentPanel>
 
