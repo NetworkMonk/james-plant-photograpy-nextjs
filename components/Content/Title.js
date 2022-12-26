@@ -14,7 +14,7 @@ export default function Title(props) {
       animate="enter"
       exit="exit"
       transition={{ type: 'linear', duration: 1, delay: 0 }}
-      className="text-xl lg:text-4xl lg:text-right mb-10 font-thin tracking-wide uppercase inline-block"
+      className="text-xl lg:text-4xl lg:text-right mb-10 font-light tracking-wide uppercase inline-block"
     >
       {children}
       <motion.div

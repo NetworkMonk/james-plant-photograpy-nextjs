@@ -44,9 +44,10 @@ export default function Menu(props) {
           animate="enter"
           exit="exit"
           transition={{ type: 'linear', duration: 1, delay: 1 }}
-          className="text-6xl text-white tracking-wide font-thin absolute whitespace-nowrap uppercase p-10"
+          className="text-6xl text-white tracking-widest font-thin absolute whitespace-nowrap uppercase p-10"
         >
-          James Plant Photography
+          James Plant
+          <span className="inline-block ml-5 text-base font-normal opacity-90 tracking-widest">Photography</span>
           <motion.div
             variants={{
               hidden: { width: 0 },
@@ -81,7 +82,7 @@ export default function Menu(props) {
                 <motion.li
                   variants={menuItemVariants}
                   transition={{ type: 'linear', duration: 1 }}
-                  className="text-lg font-thin p-8 uppercase tracking-widest hover:bg-white hover:bg-opacity-80 hover:text-black hover:pl-14 transition-all duration-500 cursor-pointer group"
+                  className="text-lg font-light p-8 uppercase tracking-widest hover:bg-white hover:bg-opacity-90 hover:text-black hover:pl-14 transition-all duration-500 cursor-pointer group"
                 >
                   <ChevronRightIcon className="inline w-5 h-5 -mt-1.5 mr-3" />
                   {menuItem.name}
@@ -127,7 +128,7 @@ export default function Menu(props) {
                       <motion.li
                         variants={menuItemVariants}
                         transition={{ type: 'linear', duration: 1 }}
-                        className="text-md font-thin p-4 px-6 uppercase tracking-widest hover:bg-white hover:bg-opacity-80 hover:text-black transition-all duration-500 cursor-pointer group"
+                        className="text-md font-light p-4 px-6 uppercase tracking-widest hover:bg-white hover:bg-opacity-90 hover:text-black transition-all duration-500 cursor-pointer group"
                       >
                         <ChevronRightIcon className="inline w-4 h-4 -mt-1 mr-3" />
                         {menuItem.name}
@@ -153,7 +154,7 @@ export default function Menu(props) {
           animate="enter"
           exit="exit"
           transition={{ type: 'linear', duration: 1, delay: 1 }}
-          className="text-lg md:text-xl text-white tracking-wide font-thin absolute uppercase p-10 z-20"
+          className="text-lg md:text-xl text-white tracking-wide font-light absolute uppercase p-10 z-20"
         >
           <div onClick={() => setMenuVisible(!menuVisible)} className="cursor-pointer">
             <Bars3Icon className="inline w-6 h-6 mr-3 -mt-1" />
