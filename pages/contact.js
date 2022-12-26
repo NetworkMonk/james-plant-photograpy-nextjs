@@ -30,7 +30,7 @@ export default function Contact() {
             </a>
           </ContentParagraph>
           <ContentParagraph>
-            <a href="https://we.me/+447545960983" className="text-lg">
+            <a href="https://wa.me/+447545960983" className="text-lg">
               <WhatsApp />
               <EnvelopeIcon className="w-5 inline-block mr-3" />07545960983
             </a>
