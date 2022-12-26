@@ -47,7 +47,7 @@ export default function Menu(props) {
           className="text-6xl text-white tracking-widest font-thin absolute whitespace-nowrap uppercase p-10"
         >
           James Plant
-          <span className="inline-block ml-5 text-base font-normal opacity-90 tracking-widest">Photography</span>
+          <span className="inline-block ml-1 text-base font-normal opacity-90 tracking-widest">Photography</span>
           <motion.div
             variants={{
               hidden: { width: 0 },
