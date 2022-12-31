@@ -23,16 +23,35 @@ export default function Contact() {
           <ContentParagraph>
             <span className="flex sm:inline-flex flex-col gap-3 justify-items-stretch">
               <a href="mailto:jamesplant@gmail.com" className="text-lg border border-white block my-0 py-2 px-6 transition-all duration-300 hover:bg-white hover:text-black">
-                <Envelope className="w-5 inline-block mr-3 fill-current" />
-                jamesplant@gmail.com
+                <span className="flex items-center">
+                  <span>
+                    <Envelope className="w-5 inline-block fill-current" />
+                  </span>
+                  <span className="mx-3">
+                    jamesplant@gmail.com
+                  </span>
+                </span>
               </a>
               <a href="https://instagram.com/jamesplantphotography" className="text-lg border border-white block my-0 py-2  px-6 transition-all duration-300 hover:bg-white hover:text-black">
-                <Instagram className="w-5 inline-block mr-3 fill-current" />
-                @jamesplantphotography
+                <span className="flex items-center">
+                  <span>
+                    <Instagram className="w-5 inline-block fill-current" />
+                  </span>
+                  <span className="mx-3">
+                    @jamesplantphotography
+                  </span>
+                </span>
+
               </a>
               <a href="https://wa.me/+447545960983" className="text-lg border border-white block my-0 py-2 px-6 transition-all duration-300 hover:bg-white hover:text-black">
-                <WhatsApp className="w-5 inline-block mr-3 fill-current" />
-                07545960983
+                <span className="flex items-center">
+                  <span>
+                    <WhatsApp className="w-5 inline-block fill-current" />
+                  </span>
+                  <span className="mx-3">
+                    07545960983
+                  </span>
+                </span>
               </a>
             </span>
           </ContentParagraph>
