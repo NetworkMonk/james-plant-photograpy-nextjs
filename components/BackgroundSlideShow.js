@@ -43,7 +43,7 @@ export default function BackgroundSlideShow() {
   }, []);
 
   return (
-    <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
+    <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden select-none pointer-events-none">
       {backgroundImageCycle && backgroundImageCycle.map((image, imageIndex) => {
         return (
           <BackgroundImage key={imageIndex} image={image} visible={currentBackground === imageIndex} />

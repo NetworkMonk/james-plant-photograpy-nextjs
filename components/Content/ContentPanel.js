@@ -49,4 +49,21 @@ function ContentParagraph(props) {
   );
 }
 
-export {ContentPanel, ContentParagraph };
+function ContentDiv(props) {
+  const { children } = props;
+
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 25 },
+        show: { opacity: 1, y: 0 },
+      }}
+      transition={{ type: 'linear', duration: 1 }}
+      className="text-gray-100 my-5 leading-relaxed tracking-wide"
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export { ContentPanel, ContentParagraph, ContentDiv };
