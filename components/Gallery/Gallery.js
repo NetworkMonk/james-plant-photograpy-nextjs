@@ -42,8 +42,8 @@ export default function Gallery(props) {
           >
             <Image
               alt=""
-              width={256}
-              height={256}
+              width={320}
+              height={320}
               src={`/img/photos/${galleryImage}.jpg`}
               className="object-cover w-full xl:h-64 xl:w-64 cursor-pointer shadow-sm hover:scale-105 hover:shadow-xl transition-all duration-200"
               onClick={() => {
@@ -64,7 +64,7 @@ export default function Gallery(props) {
             initial="hidden"
             animate="enter"
             exit="exit"
-            transition={{ duration: .5 }}
+            transition={{ duration: 0.5 }}
           >
             <FullScreenImage
               selectedImage={selectedImage}

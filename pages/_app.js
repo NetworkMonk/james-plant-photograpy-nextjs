@@ -1,14 +1,17 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import StandardPage from '../components/StandardPage';
-import '../styles/globals.css'
+import { Analytics } from "@vercel/analytics/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import StandardPage from "../components/StandardPage";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const [pageVisible, setPageVisible] = useState(false);
   const router = useRouter();
 
-  useEffect(() => { document?.querySelector("body")?.classList?.add("overflow-hidden") });
+  useEffect(() => {
+    document?.querySelector("body")?.classList?.add("overflow-hidden");
+  });
   useEffect(() => {
     const delayTimer = setTimeout(() => {
       setPageVisible(true);
@@ -17,14 +20,18 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <StandardPage>
-      <AnimatePresence onExitComplete={() => window.scrollTo(0, 0)} mode="wait">
-        {pageVisible && (
-          <Component {...pageProps} key={router.route} />
-        )}
-      </AnimatePresence>
-    </StandardPage>
+    <>
+      <StandardPage>
+        <AnimatePresence
+          onExitComplete={() => window.scrollTo(0, 0)}
+          mode="wait"
+        >
+          {pageVisible && <Component {...pageProps} key={router.route} />}
+        </AnimatePresence>
+      </StandardPage>
+      <Analytics />
+    </>
   );
 }
 
-export default MyApp
+export default MyApp;

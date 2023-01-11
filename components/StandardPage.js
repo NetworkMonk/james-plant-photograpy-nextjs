@@ -1,13 +1,16 @@
 import Head from "next/head";
 import BackgroundSlideShow from "./BackgroundSlideShow";
-import Menu from '../components/Menu'
+import Menu from "../components/Menu";
 
 export default function StandardPage(props) {
   return (
     <div className="w-screen h-screen overflow-hidden">
       <Head>
         <title>James Plant Photography</title>
-        <meta name="description" content="Portrait photographer in London and Essex. Premium portraits to an excellent standard." />
+        <meta
+          name="description"
+          content="Portrait photographer in London and Essex. Premium portraits to an excellent standard."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -21,5 +24,5 @@ export default function StandardPage(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
