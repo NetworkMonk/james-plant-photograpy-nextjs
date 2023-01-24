@@ -33,12 +33,12 @@ export default function Gallery(props) {
   const [selectedImage, setSelectedImage] = useState(false);
 
   return (
-    <div className="xl:flex flex-wrap gap-8">
+    <div className="xl:flex flex-wrap gap-8 justify-end">
       {galleryImages.map((galleryImage, galleryImageIndex) => {
         return (
           <div
             key={galleryImageIndex}
-            className="block xl:w-64 xl:h-64 my-8 xl:m-0"
+            className="block xl:w-64 xl:h-64 my-8 mx-auto xl:m-0 max-w-md"
           >
             <Image
               alt=""
