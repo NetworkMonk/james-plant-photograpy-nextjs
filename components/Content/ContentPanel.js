@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 function ContentPanel(props) {
   const { children } = props;
@@ -8,23 +8,29 @@ function ContentPanel(props) {
       variants={{
         show: {
           transition: {
-            staggerChildren: .5,
-            delayChildren: .5
-          }
+            staggerChildren: 0.5,
+            delayChildren: 0.5,
+          },
         },
         exit: {
           opacity: 0,
           transition: {
             delay: 0,
-            staggerChildren: .5,
-            delayChildren: .5,
+            staggerChildren: 0.5,
+            delayChildren: 0.5,
           },
         },
       }}
       initial="hidden"
       animate="show"
       exit="exit"
-      transition={{ type: 'linear', duration: 1, delay: 1, staggerChildren: .5, delayChildren: .5 }}
+      transition={{
+        type: "linear",
+        duration: 1,
+        delay: 1,
+        staggerChildren: 0.5,
+        delayChildren: 0.5,
+      }}
       className="text-left"
     >
       {children}
@@ -41,7 +47,7 @@ function ContentParagraph(props) {
         hidden: { opacity: 0, y: 25 },
         show: { opacity: 1, y: 0 },
       }}
-      transition={{ type: 'linear', duration: 1 }}
+      transition={{ type: "linear", duration: 1 }}
       className="text-gray-100 my-5 leading-relaxed tracking-wide"
     >
       {children}
@@ -50,7 +56,7 @@ function ContentParagraph(props) {
 }
 
 function ContentDiv(props) {
-  const { children } = props;
+  const { children, className } = props;
 
   return (
     <motion.div
@@ -58,8 +64,11 @@ function ContentDiv(props) {
         hidden: { opacity: 0, y: 25 },
         show: { opacity: 1, y: 0 },
       }}
-      transition={{ type: 'linear', duration: 1 }}
-      className="text-gray-100 my-5 leading-relaxed tracking-wide"
+      transition={{ type: "linear", duration: 1 }}
+      className={
+        "text-gray-100 my-5 leading-relaxed tracking-wide" +
+        (className ? " " + className : "")
+      }
     >
       {children}
     </motion.div>
