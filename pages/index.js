@@ -3,7 +3,14 @@ import Container from "../components/Content/Container";
 import { ContentPanel, ContentDiv } from "../components/Content/ContentPanel";
 
 export default function Home() {
-  const headlines = ["Portraits", "Maternity", "Family", "New Baby", "Fashion"];
+  const headlines = [
+    "Portraits",
+    "Maternity",
+    "Family",
+    "New Baby",
+    "Fashion",
+    "Product",
+  ];
 
   return (
     <div>
