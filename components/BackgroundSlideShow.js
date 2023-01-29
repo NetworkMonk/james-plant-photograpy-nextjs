@@ -4,7 +4,7 @@ import BackgroundImage from "./BackgroundImage";
 const backgroundImages = [
   "DSC00058",
   // "DSC01078",
-  "DSC01151",
+  // "DSC01151",
   "DSC02088",
   "DSC02109",
   "DSC03421",
